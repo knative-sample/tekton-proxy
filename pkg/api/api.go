@@ -39,6 +39,7 @@ func StartApi(args *StartApiArgs) error {
 
 	go func() {
 		glog.Infof("api server is started")
+		http.Handle("/", router)
 		if err := http.ListenAndServe(fmt.Sprintf(":%d", api.Port), router); err != nil {
 			glog.Errorf("API Listen error:%s ", err.Error())
 		}
