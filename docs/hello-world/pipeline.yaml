@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  name: tutorial-pipeline
+  namespace: tutorial
+spec:
+  tasks:
+    - name: echo
+      taskRef:
+        name: echo-hello-world

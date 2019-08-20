@@ -1,0 +1,8 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineRun
+metadata:
+  name: tutorial-pipelinerun
+  namespace: tutorial
+spec:
+  pipelineRef:
+    name: tutorial-pipeline
